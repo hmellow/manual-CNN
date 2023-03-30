@@ -30,8 +30,12 @@ class nNet():
                 x[i][j] = max(0, x[i][j])
         return x
 
-    def conv2d():
-        pass
+    def conv2d(num_filters, kernel_size, stride):
+        # Initialize filters with random weights between -1 and 1, inclusive
+        filters = np.array([np.random.uniform(
+            low=-1, high=1, size=(kernel_size, kernel_size)) for _ in range(num_filters)])
+        # Initialize biases to 0
+        biases = np.zeros(num_filters)
 
     def linear():
         pass
